@@ -10,8 +10,10 @@ Source0:	http://distfiles.xgl-coffee.org/beryl-plugins/%{name}-%{version}.tar.bz
 BuildRequires:	autoconf >= 2.57
 BuildRequires:	automake
 BuildRequires:	beryl-core-devel >= 0.1.0
-BuildRequires:	dbus-devel
-BuildRequires:	librsvg-devel
+BuildRequires:	cairo-devel >= 1.0
+BuildRequires:	dbus-devel >= 0.50
+BuildRequires:	glib2-devel >= 2.0
+BuildRequires:	librsvg-devel >= 2.14.0
 BuildRequires:	libtool
 BuildRequires:	pkgconfig
 Requires:	beryl-core >= 0.1.0
@@ -46,9 +48,9 @@ rm -rf $RPM_BUILD_ROOT
 
 %files
 %defattr(644,root,root,755)
-%doc AUTHORS README
+%doc AUTHORS README debian/changelog
 %dir %{_libdir}/beryl
-%attr(755,root,root) %{_libdir}/beryl/*
+%attr(755,root,root) %{_libdir}/beryl/*.so
 %dir %{_datadir}/beryl
 %{_datadir}/beryl/*.settings
 %{_datadir}/beryl/*.png
