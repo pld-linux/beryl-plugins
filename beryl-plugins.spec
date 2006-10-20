@@ -1,12 +1,14 @@
 Summary:	beryl plugins
 Summary(pl):	Wtyczki do beryla
 Name:		beryl-plugins
-Version:	20061004
+Version:	20061020
 Release:	1
 License:	GPL/MIT
 Group:		X11
-Source0:	http://distfiles.xgl-coffee.org/beryl-plugins/%{name}-%{version}.tar.bz2
-# Source0-md5:	dc12e381efacbdc8f529143fefa8ed43
+#Source0:	http://distfiles.xgl-coffee.org/beryl-plugins/%{name}-%{version}.tar.bz2
+Source0:	%{name}-%{version}.tar.bz2
+# Source0-md5:	77e76eb88e147429f66ef36915ba1073
+Patch0:		%{name}-fsck-patents.patch
 BuildRequires:	autoconf >= 2.57
 BuildRequires:	automake
 BuildRequires:	beryl-core-devel >= 0.1.0
@@ -26,7 +28,8 @@ beryl plugins.
 Wtyczki do beryla.
 
 %prep
-%setup -q -n snapshots/%{name}
+%setup -q -n %{name}
+%patch0 -p1
 
 %build
 autoreconf -v --install
@@ -54,4 +57,3 @@ rm -rf $RPM_BUILD_ROOT
 %dir %{_datadir}/beryl
 %{_datadir}/beryl/*.settings
 %{_datadir}/beryl/*.png
-%{_datadir}/dbus-1/services/beryl.service
