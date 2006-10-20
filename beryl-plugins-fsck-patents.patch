@@ -1,0 +1,21 @@
+diff -ruN beryl-plugins./src/animation.c beryl-plugins/src/animation.c
+--- beryl-plugins./src/animation.c	2006-10-20 16:38:33.000000000 +0200
++++ beryl-plugins/src/animation.c	2006-10-20 19:05:31.381582196 +0200
+@@ -117,7 +117,7 @@
+ #define ANIM_MAGIC_LAMP1_GRID_RES_MAX      200
+ 
+ #define ANIM_MAGIC_LAMP1_MAX_WAVES_DEFAULT  5
+-#define ANIM_MAGIC_LAMP1_MAX_WAVES_MIN      3
++#define ANIM_MAGIC_LAMP1_MAX_WAVES_MIN      0
+ #define ANIM_MAGIC_LAMP1_MAX_WAVES_MAX      20
+ 
+ #define ANIM_MAGIC_LAMP1_WAVE_AMP_MIN_DEFAULT  200
+@@ -135,7 +135,7 @@
+ #define ANIM_MAGIC_LAMP2_GRID_RES_MAX      200
+ 
+ #define ANIM_MAGIC_LAMP2_MAX_WAVES_DEFAULT  3
+-#define ANIM_MAGIC_LAMP2_MAX_WAVES_MIN      3
++#define ANIM_MAGIC_LAMP2_MAX_WAVES_MIN      0
+ #define ANIM_MAGIC_LAMP2_MAX_WAVES_MAX      20
+ 
+ #define ANIM_MAGIC_LAMP2_WAVE_AMP_MIN_DEFAULT  200
