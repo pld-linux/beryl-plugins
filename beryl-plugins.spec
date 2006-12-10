@@ -1,13 +1,12 @@
 Summary:	beryl plugins
 Summary(pl):	Wtyczki do beryla
 Name:		beryl-plugins
-Version:	20061201
+Version:	0.1.3
 Release:	1
 License:	GPL/MIT
 Group:		X11
-#Source0:	http://distfiles.xgl-coffee.org/beryl-plugins/%{name}-%{version}.tar.bz2
-Source0:	%{name}-%{version}.tar.bz2
-# Source0-md5:	564c90cecfe658f356a4c07a11893bd1
+Source0:	http://releases.beryl-project.org/%{version}/%{name}-%{version}.tar.bz2
+# Source0-md5:	de5f6089d05c6d92161729c47857b985
 Patch0:		%{name}-fsck-patents.patch
 BuildRequires:	autoconf >= 2.57
 BuildRequires:	automake
@@ -29,8 +28,34 @@ beryl plugins.
 Wtyczki do beryla.
 
 %prep
-%setup -q -n %{name}
+%setup -q
 %patch0 -p1
+mv -f po/{es_AR,ar}.po
+mv -f po/{es_ES,es}.po
+mv -f po/{fr_FR,fr}.po
+mv -f po/{hu_HU,hu}.po
+mv -f po/{it_IT,it}.po
+mv -f po/{ja_JP,ja}.po
+mv -f po/{ko_KR,ko}.po
+mv -f po/{pt_PT,pt}.po
+mv -f po/{sv_SE,sv}.po
+
+    # NOTE: check the list ofter any upgrade!
+cat > po/LINGUAS <<EOF
+ar
+es
+fr
+hu
+it
+ja
+ko
+pt_BR
+pt
+sv
+zh_CN
+zh_HK
+zh_TW
+EOF
 
 %build
 autoreconf -v --install
