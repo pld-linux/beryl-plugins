@@ -22,6 +22,7 @@ BuildRequires:	librsvg-devel >= 2.14.0
 BuildRequires:	libtool
 BuildRequires:	pkgconfig
 Requires:	beryl-core >= 1:0.1.3
+Obsoletes:	compiz-quinnstorm-plugins
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %description
