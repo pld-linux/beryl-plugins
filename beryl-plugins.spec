@@ -4,18 +4,20 @@ Name:		beryl-plugins
 Version:	0.1.3
 Release:	1
 Epoch:		1
-License:	GPL/MIT
+License:	GPL v2+/MIT (depending on plugin)
 Group:		X11
 Source0:	http://releases.beryl-project.org/%{version}/%{name}-%{version}.tar.bz2
 # Source0-md5:	de5f6089d05c6d92161729c47857b985
 Patch0:		%{name}-fsck-patents.patch
+URL:		http://beryl-project.org/
+BuildRequires:	OpenGL-devel
 BuildRequires:	autoconf >= 2.57
-BuildRequires:	automake
+BuildRequires:	automake >= 1:1.7
 BuildRequires:	beryl-core-devel >= 1:0.1.3
 BuildRequires:	cairo-devel >= 1.0
 BuildRequires:	dbus-devel >= 0.50
 BuildRequires:	glib2-devel >= 2.0
-BuildRequires:	intltool
+BuildRequires:	intltool >= 0.35.0
 BuildRequires:	librsvg-devel >= 2.14.0
 BuildRequires:	libtool
 BuildRequires:	pkgconfig
@@ -31,6 +33,7 @@ Wtyczki do beryla.
 %prep
 %setup -q
 %patch0 -p1
+mv -f po/{ca_ES,ca}.po
 mv -f po/{es_ES,es}.po
 mv -f po/{fr_FR,fr}.po
 mv -f po/{hu_HU,hu}.po
@@ -39,9 +42,11 @@ mv -f po/{ja_JP,ja}.po
 mv -f po/{ko_KR,ko}.po
 mv -f po/{pt_PT,pt}.po
 mv -f po/{sv_SE,sv}.po
+# sv_FI is identical to sv_SE
 
 # NOTE: check the list ofter any upgrade!
 cat > po/LINGUAS <<EOF
+ca
 es
 es_AR
 fr
@@ -58,10 +63,13 @@ zh_TW
 EOF
 
 %build
-autoreconf -v --install
 %{__glib_gettextize}
 %{__intltoolize} --automake
-
+%{__libtoolize}
+%{__aclocal}
+%{__autoconf}
+%{__autoheader}
+%{__automake}
 %configure \
 	--disable-static
 %{__make}
