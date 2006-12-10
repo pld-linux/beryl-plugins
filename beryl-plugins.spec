@@ -3,6 +3,7 @@ Summary(pl):	Wtyczki do beryla
 Name:		beryl-plugins
 Version:	0.1.3
 Release:	1
+Epoch:		1
 License:	GPL/MIT
 Group:		X11
 Source0:	http://releases.beryl-project.org/%{version}/%{name}-%{version}.tar.bz2
@@ -10,7 +11,7 @@ Source0:	http://releases.beryl-project.org/%{version}/%{name}-%{version}.tar.bz2
 Patch0:		%{name}-fsck-patents.patch
 BuildRequires:	autoconf >= 2.57
 BuildRequires:	automake
-BuildRequires:	beryl-core-devel >= 0.1.0
+BuildRequires:	beryl-core-devel >= 1:0.1.3
 BuildRequires:	cairo-devel >= 1.0
 BuildRequires:	dbus-devel >= 0.50
 BuildRequires:	glib2-devel >= 2.0
@@ -18,7 +19,7 @@ BuildRequires:	intltool
 BuildRequires:	librsvg-devel >= 2.14.0
 BuildRequires:	libtool
 BuildRequires:	pkgconfig
-Requires:	beryl-core >= 0.1.0
+Requires:	beryl-core >= 1:0.1.3
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %description
@@ -60,7 +61,7 @@ EOF
 %build
 autoreconf -v --install
 %{__glib_gettextize}
-intltoolize --automake --copy --force
+%{__intltoolize} --automake
 
 %configure \
 	--disable-static
@@ -82,7 +83,5 @@ rm -rf $RPM_BUILD_ROOT
 %files -f %{name}.lang
 %defattr(644,root,root,755)
 %doc AUTHORS README
-%dir %{_libdir}/beryl
 %attr(755,root,root) %{_libdir}/beryl/*.so
-%dir %{_datadir}/beryl
 %{_datadir}/beryl/*.png
