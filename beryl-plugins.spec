@@ -31,7 +31,6 @@ Wtyczki do beryla.
 %prep
 %setup -q
 %patch0 -p1
-mv -f po/{es_AR,ar}.po
 mv -f po/{es_ES,es}.po
 mv -f po/{fr_FR,fr}.po
 mv -f po/{hu_HU,hu}.po
@@ -41,10 +40,10 @@ mv -f po/{ko_KR,ko}.po
 mv -f po/{pt_PT,pt}.po
 mv -f po/{sv_SE,sv}.po
 
-    # NOTE: check the list ofter any upgrade!
+# NOTE: check the list ofter any upgrade!
 cat > po/LINGUAS <<EOF
-ar
 es
+es_AR
 fr
 hu
 it
