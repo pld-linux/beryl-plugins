@@ -41,6 +41,7 @@ mv -f po/{hu_HU,hu}.po
 mv -f po/{it_IT,it}.po
 mv -f po/{ja_JP,ja}.po
 mv -f po/{ko_KR,ko}.po
+mv -f po/{pl_PL,pl}.po
 mv -f po/{pt_PT,pt}.po
 mv -f po/{sv_SE,sv}.po
 # sv_FI is identical to sv_SE
@@ -55,6 +56,7 @@ hu
 it
 ja
 ko
+pl
 pt_BR
 pt
 sv
