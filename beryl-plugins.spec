@@ -13,7 +13,7 @@ URL:		http://beryl-project.org/
 BuildRequires:	OpenGL-devel
 BuildRequires:	autoconf >= 2.57
 BuildRequires:	automake >= 1:1.7
-BuildRequires:	beryl-core-devel >= 1:0.1.3
+BuildRequires:	beryl-core-devel >= 1:0.1.99.2
 BuildRequires:	cairo-devel >= 1.0
 BuildRequires:	dbus-devel >= 0.50
 BuildRequires:	glib2-devel >= 2.0
@@ -21,7 +21,7 @@ BuildRequires:	intltool >= 0.35.0
 BuildRequires:	librsvg-devel >= 2.14.0
 BuildRequires:	libtool
 BuildRequires:	pkgconfig
-Requires:	beryl-core >= 1:0.1.3
+Requires:	beryl-core >= 1:0.1.99.2
 Obsoletes:	compiz-quinnstorm-plugins
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
