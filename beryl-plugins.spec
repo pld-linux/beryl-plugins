@@ -2,7 +2,7 @@ Summary:	beryl plugins
 Summary(pl):	Wtyczki do beryla
 Name:		beryl-plugins
 Version:	0.1.99.2
-Release:	1
+Release:	2
 Epoch:		1
 License:	GPL v2+/MIT (depending on plugin)
 Group:		X11
@@ -23,6 +23,7 @@ BuildRequires:	libtool
 BuildRequires:	pkgconfig
 Requires:	beryl-core >= 1:0.1.99.2
 Obsoletes:	compiz-quinnstorm-plugins
+Obsoletes:	beryl-dbus
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %description
