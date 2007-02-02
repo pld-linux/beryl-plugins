@@ -1,19 +1,19 @@
 Summary:	beryl plugins
 Summary(pl):	Wtyczki do beryla
 Name:		beryl-plugins
-Version:	0.1.99.2
-Release:	2
+Version:	0.1.9999.1
+Release:	1
 Epoch:		1
 License:	GPL v2+/MIT (depending on plugin)
 Group:		X11
 Source0:	http://releases.beryl-project.org/%{version}/%{name}-%{version}.tar.bz2
-# Source0-md5:	7b116756dd841afa0c72f5556284714e
+# Source0-md5:	be876763b0bd9f2c11cca764ce348c3d
 Patch0:		%{name}-fsck-patents.patch
 URL:		http://beryl-project.org/
 BuildRequires:	OpenGL-devel
 BuildRequires:	autoconf >= 2.57
 BuildRequires:	automake >= 1:1.7
-BuildRequires:	beryl-core-devel >= 1:0.1.99.2
+BuildRequires:	beryl-core-devel >= 1:%{version}
 BuildRequires:	cairo-devel >= 1.0
 BuildRequires:	dbus-devel >= 0.50
 BuildRequires:	glib2-devel >= 2.0
@@ -21,7 +21,7 @@ BuildRequires:	intltool >= 0.35.0
 BuildRequires:	librsvg-devel >= 2.14.0
 BuildRequires:	libtool
 BuildRequires:	pkgconfig
-Requires:	beryl-core >= 1:0.1.99.2
+Requires:	beryl-core >= 1:%{version}
 Obsoletes:	compiz-quinnstorm-plugins
 Obsoletes:	beryl-dbus
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
