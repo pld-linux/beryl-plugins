@@ -1,5 +1,5 @@
 Summary:	beryl plugins
-Summary(pl.UTF-8):   Wtyczki do beryla
+Summary(pl.UTF-8):	Wtyczki do beryla
 Name:		beryl-plugins
 Version:	0.1.9999.1
 Release:	1
