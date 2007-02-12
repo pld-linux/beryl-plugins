@@ -1,5 +1,5 @@
 Summary:	beryl plugins
-Summary(pl):	Wtyczki do beryla
+Summary(pl.UTF-8):   Wtyczki do beryla
 Name:		beryl-plugins
 Version:	0.1.9999.1
 Release:	1
@@ -29,7 +29,7 @@ BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 %description
 beryl plugins.
 
-%description -l pl
+%description -l pl.UTF-8
 Wtyczki do beryla.
 
 %prep
