@@ -57,6 +57,7 @@ hu
 it
 ja
 ko
+nl
 pl
 pt_BR
 pt
