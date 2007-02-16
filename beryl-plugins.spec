@@ -42,6 +42,7 @@ mv -f po/{hu_HU,hu}.po
 mv -f po/{it_IT,it}.po
 mv -f po/{ja_JP,ja}.po
 mv -f po/{ko_KR,ko}.po
+mv -f po/{nb_NO,nb}.po
 mv -f po/{pl_PL,pl}.po
 mv -f po/{pt_PT,pt}.po
 mv -f po/{sv_SE,sv}.po
@@ -57,6 +58,7 @@ hu
 it
 ja
 ko
+nb
 nl
 pl
 pt_BR
