@@ -1,13 +1,13 @@
 Summary:	beryl plugins
 Summary(pl.UTF-8):	Wtyczki do beryla
 Name:		beryl-plugins
-Version:	0.1.9999.2
+Version:	0.2.0
 Release:	1
 Epoch:		1
 License:	GPL v2+/MIT (depending on plugin)
 Group:		X11
 Source0:	http://releases.beryl-project.org/%{version}/%{name}-%{version}.tar.bz2
-# Source0-md5:	1dd90be00f7889cf4cef197b4f8ea7c3
+# Source0-md5:	15ca97214f2f29fd3c8fc2fe8491c812
 Patch0:		%{name}-fsck-patents.patch
 URL:		http://beryl-project.org/
 BuildRequires:	OpenGL-devel
@@ -35,18 +35,12 @@ Wtyczki do beryla.
 %prep
 %setup -q
 %patch0 -p1
-mv -f po/{ca_ES,ca}.po
-mv -f po/{es_ES,es}.po
-mv -f po/{fr_FR,fr}.po
 mv -f po/{hu_HU,hu}.po
 mv -f po/{it_IT,it}.po
-mv -f po/{ja_JP,ja}.po
-mv -f po/{ko_KR,ko}.po
 mv -f po/{nb_NO,nb}.po
 mv -f po/{pl_PL,pl}.po
 mv -f po/{pt_PT,pt}.po
 mv -f po/{sv_SE,sv}.po
-# sv_FI is identical to sv_SE
 
 # NOTE: check the list after any upgrade!
 cat > po/LINGUAS <<EOF
