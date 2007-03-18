@@ -1,13 +1,13 @@
 Summary:	beryl plugins
 Summary(pl.UTF-8):	Wtyczki do beryla
 Name:		beryl-plugins
-Version:	0.2.0
+Version:	0.2.1
 Release:	1
 Epoch:		1
 License:	GPL v2+/MIT (depending on plugin)
 Group:		X11
 Source0:	http://releases.beryl-project.org/%{version}/%{name}-%{version}.tar.bz2
-# Source0-md5:	15ca97214f2f29fd3c8fc2fe8491c812
+# Source0-md5:	3d7d13dd42aea48bba5be7cfe6c7f371
 Patch0:		%{name}-fsck-patents.patch
 URL:		http://beryl-project.org/
 BuildRequires:	OpenGL-devel
