@@ -4,7 +4,7 @@ Name:		beryl-plugins
 Version:	0.2.1
 Release:	1
 Epoch:		1
-License:	GPL v2+/MIT (depending on plugin)
+License:	GPL v2+
 Group:		X11
 Source0:	http://releases.beryl-project.org/%{version}/%{name}-%{version}.tar.bz2
 # Source0-md5:	3d7d13dd42aea48bba5be7cfe6c7f371
