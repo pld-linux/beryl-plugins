@@ -17,6 +17,7 @@ BuildRequires:	beryl-core-devel >= 1:%{version}
 BuildRequires:	cairo-devel >= 1.0
 BuildRequires:	dbus-devel >= 0.50
 BuildRequires:	glib2-devel >= 2.0
+BuildRequires:	glitz-devel
 BuildRequires:	intltool >= 0.35.0
 BuildRequires:	librsvg-devel >= 2.14.0
 BuildRequires:	libtool
